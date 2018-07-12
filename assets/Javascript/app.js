@@ -24,7 +24,6 @@ $(document).ready(function () {
     function renderLinks() {
         $("#gif-nav").empty();
         var linkList = $("<nav>");
-        var link
         buttonArray.forEach(function (gif) {
 
             var gifLink = $("<div>").text(gif);
@@ -51,7 +50,7 @@ $(document).ready(function () {
             $("#gif-row").empty();
             res.data.forEach(function (gifObj) {
                 var cardContainer = $("<div>").addClass("col-sm-6 col-xs-12 mb-3");
-                var card = $("<div>").addClass("card");
+                var card = $("<div>").addClass("card text-white bg-warning");
                 var gif = $("<img>").attr("src", gifObj.images.fixed_height_still.url);
                 gif.attr("data-still", gifObj.images.fixed_height_still.url);
                 gif.attr("data-animate", gifObj.images.fixed_height.url);
@@ -59,17 +58,7 @@ $(document).ready(function () {
                 gif.addClass("card-img-top")
                 var cardBody = $("<div>").addClass("card-body");
                 var cardTitle = $("<h5>").addClass("card-title").text(gifObj.title);
-                var cardSubtitle = $("<h6>").addClass("card-subtitle text-muted").text("Rating: " + gifObj.rating);
-
-
-                // var gifContainer = $("<div>").addClass("gif-container").text("Rating: " + gifObj.rating);
-                // var gifImg = $("<img>").attr("src", gifObj.images.fixed_height_still.url);
-                // gifImg.attr("data-still", gifObj.images.fixed_height_still.url);
-                // gifImg.attr("data-animate", gifObj.images.fixed_height.url);
-                // gifImg.attr("data-state", "still");
-                // gifImg.addClass("p-1");
-                // $(gifContainer).append(gifImg);
-                // $("#gif-display").append(gifContainer);
+                var cardSubtitle = $("<h6>").addClass("card-subtitle").text("Rating: " + gifObj.rating);
 
                 //appending cards to page
                 cardContainer.append(card);

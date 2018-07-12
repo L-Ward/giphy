@@ -1,0 +1,12 @@
+.header {
+    background-color: #ffc107;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#add-gif-submit {
+    background-color: #ffc107;
+    color: white;
+}
