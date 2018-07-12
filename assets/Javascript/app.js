@@ -3,9 +3,7 @@ $(document).ready(function () {
     var buttonArray = ["Happy", "Jealous", "Giggly"];
     var APIKey = "yZlUH2F4Qe7wHw2uAg4siJNYjIJpUtb1"
 
-
     renderLinks();
-
 
     // This function handles events where one button is clicked
     $("#add-gif-submit").on("click", function () {
@@ -16,8 +14,6 @@ $(document).ready(function () {
         renderLinks();
         $("#add-gif").val("");
     });
-
-    //SCREEN BUILDERS 
 
     //ELEMENT BUILDERS
     //link builders
@@ -37,7 +33,6 @@ $(document).ready(function () {
     }
 
     //HANDLERS
-
     //AJAX CALL
     function displayGifs() {
         var gif = $(this).attr("value");
@@ -73,7 +68,6 @@ $(document).ready(function () {
 
     //RANDOM FUNCTIONS
     // $(".gif").on("click", function () {
-
     function toggleGif() {
         var state = $(this).attr("data-state");
 
